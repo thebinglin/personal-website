@@ -1,0 +1,186 @@
+[
+  {
+    "id": "turtle",
+    "category": "underwater",
+    "src": "https://images.squarespace-cdn.com/content/v1/6584fe2f3bbafd4de705d74f/3b1413d3-21d5-41b0-aa7a-4389dc66e6f4/_H2O6969_JPEG.jpeg",
+    "alt": "Sea turtle swimming above a coral reef in blue water",
+    "credit": "© Bing Lin",
+    "featured": true
+  },
+  {
+    "id": "reef-wall",
+    "category": "underwater",
+    "src": "https://images.squarespace-cdn.com/content/v1/6584fe2f3bbafd4de705d74f/085b79c6-c9a2-4bbe-9692-be4a1d53f26b/LIN06856_JPEG.JPG",
+    "alt": "Layered plate corals descending into deep blue water",
+    "credit": "© Bing Lin",
+    "featured": true
+  },
+  {
+    "id": "pink-corals",
+    "category": "underwater",
+    "src": "https://images.squarespace-cdn.com/content/v1/6584fe2f3bbafd4de705d74f/cb2efed8-af9c-4b02-92bf-53ced94bc2e2/_H2O9721-Enhanced-NR_JPEG%2Bcopy%2BLarge.jpeg",
+    "alt": "Tiny reef fish among vivid pink soft corals",
+    "credit": "© Bing Lin",
+    "featured": true
+  },
+  {
+    "id": "fish-dark",
+    "category": "underwater",
+    "src": "https://images.squarespace-cdn.com/content/v1/6584fe2f3bbafd4de705d74f/bb620705-9d5e-4020-91a0-113bb76ad885/LIN07769-Edit_JPEG.jpg",
+    "alt": "Small silver reef fish among dark coral formations",
+    "credit": "© Bing Lin",
+    "featured": false
+  },
+  {
+    "id": "moray",
+    "category": "underwater",
+    "src": "https://images.squarespace-cdn.com/content/v1/6584fe2f3bbafd4de705d74f/f43d6f0c-2fff-4bdb-8df7-97edf824893b/_H2O4350-Edit_JPEG.jpg",
+    "alt": "Moray eel looking out from a richly textured coral reef",
+    "credit": "© Bing Lin",
+    "featured": false
+  },
+  {
+    "id": "moving-fish",
+    "category": "underwater",
+    "src": "https://images.squarespace-cdn.com/content/v1/6584fe2f3bbafd4de705d74f/454bb0d6-c00b-4e35-9e07-780fd012aeb1/TAMRON-08545.jpg",
+    "alt": "School of fish moving through a shallow coral habitat",
+    "credit": "© Bing Lin",
+    "featured": true
+  },
+  {
+    "id": "shark",
+    "category": "underwater",
+    "src": "https://images.squarespace-cdn.com/content/v1/6584fe2f3bbafd4de705d74f/1703216347384-0XAR2Y3P84NOWMD144EV/TAMRON-08557.jpg",
+    "alt": "Shark swimming beneath a coral overhang",
+    "credit": "© Bing Lin",
+    "featured": false
+  },
+  {
+    "id": "anemonefish",
+    "category": "underwater",
+    "src": "https://images.squarespace-cdn.com/content/v1/6584fe2f3bbafd4de705d74f/3f948f8e-2bf2-4945-8cc3-1e89e558c642/LIN04070-Edit_JPEG.jpg",
+    "alt": "Golden anemonefish sheltering among pale anemone tentacles",
+    "credit": "© Bing Lin",
+    "featured": true
+  },
+  {
+    "id": "diver-blue",
+    "category": "underwater",
+    "src": "https://images.squarespace-cdn.com/content/v1/6584fe2f3bbafd4de705d74f/2b8f7b42-b73d-4137-ad96-54c739f22778/LIN06341-Edit_JPEG.jpg",
+    "alt": "Scuba diver moving through a school of slender fish",
+    "credit": "© Bing Lin",
+    "featured": false
+  },
+  {
+    "id": "crab-anemone",
+    "category": "underwater",
+    "src": "https://images.squarespace-cdn.com/content/v1/6584fe2f3bbafd4de705d74f/7acb07c0-e675-44be-a63f-9e744dd4f0f8/_H2O8156-Edit_JPEG-2%2Bcopy%2BLarge.jpeg",
+    "alt": "Small patterned crustacean perched among anemone tentacles",
+    "credit": "© Bing Lin",
+    "featured": false
+  },
+  {
+    "id": "shark-mono",
+    "category": "underwater",
+    "src": "https://images.squarespace-cdn.com/content/v1/6584fe2f3bbafd4de705d74f/56b8759e-8fa2-4212-84f5-0297507e8935/_H2O0079_JPEG-2%2BLarge.jpeg",
+    "alt": "Black-and-white photograph of a shark and schooling fish",
+    "credit": "© Bing Lin",
+    "featured": false
+  },
+  {
+    "id": "gelada",
+    "category": "topside",
+    "src": "https://images.squarespace-cdn.com/content/v1/6584fe2f3bbafd4de705d74f/1703216012357-82LKE7XFJ25A3UP2DT1P/LIN_BING_PB114573.jpeg",
+    "alt": "Close portrait of a gelada with intense amber eyes",
+    "credit": "© Bing Lin",
+    "featured": true
+  },
+  {
+    "id": "shorebird",
+    "category": "topside",
+    "src": "https://images.squarespace-cdn.com/content/v1/6584fe2f3bbafd4de705d74f/69ded6bb-85df-44f2-b4e0-eabec97a722b/TULUM-.jpg",
+    "alt": "Small shorebird feeding at the edge of the surf",
+    "credit": "© Bing Lin",
+    "featured": true
+  },
+  {
+    "id": "pelican",
+    "category": "topside",
+    "src": "https://images.squarespace-cdn.com/content/v1/6584fe2f3bbafd4de705d74f/bc5c8ba7-420b-4993-ba81-39061e56e420/TULUM-2046.jpg",
+    "alt": "Black-and-white pelican with wings extended in flight",
+    "credit": "© Bing Lin",
+    "featured": true
+  },
+  {
+    "id": "migrating-birds",
+    "category": "topside",
+    "src": "https://images.squarespace-cdn.com/content/v1/6584fe2f3bbafd4de705d74f/a8a3c60f-5bb2-4546-a650-2022f592ad3b/TULUM-0791.jpeg",
+    "alt": "Birds crossing a dusk sky above coastal forest",
+    "credit": "© Bing Lin",
+    "featured": false
+  },
+  {
+    "id": "pinnacle",
+    "category": "topside",
+    "src": "https://images.squarespace-cdn.com/content/v1/6584fe2f3bbafd4de705d74f/4395cc77-9f25-4721-876b-13fa1e23cb5e/_C044914-Edit-2_JPEG.jpg",
+    "alt": "Forested rock pinnacle rising through low cloud",
+    "credit": "© Bing Lin",
+    "featured": true
+  },
+  {
+    "id": "mountains",
+    "category": "topside",
+    "src": "https://images.squarespace-cdn.com/content/v1/6584fe2f3bbafd4de705d74f/43bcaace-2c6c-4440-8be6-b5233db8ac26/_TOP3520_JPEG.jpg",
+    "alt": "Sunlit mountain ridge and dense conifer forest",
+    "credit": "© Bing Lin",
+    "featured": false
+  },
+  {
+    "id": "wildflowers",
+    "category": "topside",
+    "src": "https://images.squarespace-cdn.com/content/v1/6584fe2f3bbafd4de705d74f/477932f3-21b3-47a8-be97-d65ff259585d/_TOP5077-Enhanced-NR_JPEG.jpg",
+    "alt": "Hummingbird near purple wildflowers in a green forest",
+    "credit": "© Bing Lin",
+    "featured": false
+  },
+  {
+    "id": "forest-dusk",
+    "category": "topside",
+    "src": "https://images.squarespace-cdn.com/content/v1/6584fe2f3bbafd4de705d74f/c2635250-74ea-415e-ac77-2e1aaf247212/DJI_20240722201641_0033_D_JPEG-2%2BLarge.jpeg",
+    "alt": "Aerial view of forested hills beneath a colorful sunset",
+    "credit": "© Bing Lin",
+    "featured": true
+  },
+  {
+    "id": "forest-fire",
+    "category": "topside",
+    "src": "https://images.squarespace-cdn.com/content/v1/6584fe2f3bbafd4de705d74f/08f2aef3-bd1b-40fa-a4c6-2f487b054af2/DJI_20240719100555_0009_D-Enhanced-NR_JPEG%2BLarge.jpeg",
+    "alt": "Aerial view of pale fire-affected forest and a narrow track",
+    "credit": "© Bing Lin",
+    "featured": false
+  },
+  {
+    "id": "portrait",
+    "category": "portrait",
+    "src": "https://images.squarespace-cdn.com/content/v1/6584fe2f3bbafd4de705d74f/f2bad82f-8ed0-4d31-8cf2-fd51c6c6a497/Bing_Lin_Headshot.jpg",
+    "alt": "Bing Lin smiling on a mountain trail wearing a camera",
+    "credit": "© Bing Lin",
+    "featured": true
+  },
+  {
+    "id": "diving-portrait",
+    "category": "portrait",
+    "src": "https://images.squarespace-cdn.com/content/v1/6584fe2f3bbafd4de705d74f/5ab6565d-f623-45ce-a769-f46ea123baa8/20231231-_H2O5682%2Bcopy.jpg",
+    "alt": "Bing Lin underwater wearing scuba equipment",
+    "credit": "© Bing Lin",
+    "featured": true
+  },
+  {
+    "id": "book-reef",
+    "category": "underwater",
+    "src": "https://images.squarespace-cdn.com/content/v1/6584fe2f3bbafd4de705d74f/4c1c6388-dda8-4cbc-b03d-2103e61e5d85/MPAInadequacies_ScienceStory_Lin-12.jpg",
+    "alt": "Underwater scene photographed for a marine conservation story",
+    "credit": "© Bing Lin",
+    "featured": false
+  }
+]

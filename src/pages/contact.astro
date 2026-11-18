@@ -1,0 +1,9 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import photos from '../data/photos.json';
+const photo=photos.find(p=>p.id==='diving-portrait').src+'?format=1400w';
+---
+<BaseLayout title="Contact | Bing Lin" description="Get in touch with Bing Lin for research collaborations, environmental journalism, photography and book inquiries." theme="light">
+<section class="contact-intro"><div><span class="overline dark">LET'S TALK / A NOTE FROM BING</span><h1>Dear <em>you,</em></h1><p>Reach out for research collaborations, photography prints, commissions, or just to say “hi”!</p><a class="contact-email" href="mailto:thebinglin@gmail.com">thebinglin@gmail.com ↗</a><p class="contact-signoff">Best fishes,<br /><em>Bing</em></p></div><figure><img src={photo} alt="Bing Lin photographing underwater while scuba diving" loading="lazy"/><figcaption>OFTEN OUT OF THE OFFICE / OCCASIONALLY UNDERWATER</figcaption></figure></section>
+<section class="contact-pathways"><div><span class="overline dark">THE SHORTCUTS</span><h2>Where to <em>next?</em></h2></div><div class="contact-path-grid"><a href="/science/">Research & publications ↗</a><a href="/photography/">Photography & commissions ↗</a><a href="/writing/">Writing & reporting ↗</a><a href="/book/">The forthcoming book ↗</a></div></section>
+</BaseLayout>

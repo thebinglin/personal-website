@@ -1,0 +1,52 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import photos from '../data/photos.json';
+const get=(id)=>photos.find(p=>p.id===id);
+const photo=(id,width=1600)=>get(id).src+`?format=${width}w`;
+---
+<BaseLayout title="Bing Lin — Nature & Human Nature | Science + Storytelling" description="Bing Lin is a conservation scientist, photojournalist and writer exploring the intricate relationships between Nature and Human Nature through research, photographs and stories." theme="dark" image={photo('turtle',1500)}>
+  <section class="home-opener" aria-label="Nature and Human Nature">
+    <div class="home-opener-pair">
+      <img class="opening-reef" src={photo('reef-wall',2500)} alt={get('reef-wall').alt} fetchpriority="high" />
+      <img class="opening-human" src={photo('diving-portrait',1500)} alt={get('diving-portrait').alt} fetchpriority="high" />
+    </div>
+    <div class="home-opener-glaze" aria-hidden="true"></div>
+    <div class="opener-kicker"><span>BING LIN / A PERSONAL ATLAS</span><span>SCIENCE + STORYTELLING</span></div>
+    <div class="opener-wordmark"><h1><span class="title-one">Nature<span class="fullstop">.</span></span><span class="title-two"><em>Human</em> nature<span class="fullstop">.</span></span></h1><p>Conservation scientist, photographer, and writer.<br />Looking at the natural world—and our place in it.</p></div>
+    <div class="opener-bottom"><span>INDONESIA ↗ EVERYWHERE ELSE</span><a href="#first-page">SCROLL TO BEGIN <span aria-hidden="true">↓</span></a><span>01 / 06</span></div>
+  </section>
+
+  <section class="home-preface cream-section" id="first-page">
+    <div class="folia-index"><span class="chapter-mark">I</span><span>PROLOGUE / THE PERSON BEHIND THE WORK</span></div>
+    <div class="preface-grid">
+      <div data-reveal><p class="overline dark">A VERY SHORT INTRODUCTION</p><h2>I’ve been on the move <em>ever since.</em></h2><p class="large-serif">I was born and raised in West Java, Indonesia, went to the U.S. for college through to my PhD, and have been on the move ever since.</p><p>I’m a conservation scientist and photojournalist at the University of Sydney specializing in the social–ecological dimensions of coral reefs and their conservation. Through my scientific research and storytelling, I try to illuminate the often intricate relationships between Nature and Human Nature.</p><p>Beyond my research, I’m a photographer and writer documenting how environmental change shapes both ecosystems and human communities—from the reefs of the Coral Triangle to the forests of North America.</p><a class="text-arrow" href="/contact/">A little more about me <span aria-hidden="true">↗</span></a></div>
+      <figure class="preface-portrait" data-reveal><img src={photo('portrait',1000)} alt={get('portrait').alt} loading="lazy"/><figcaption>THE PERSON BEHIND THE CAMERA / AND THE PAPERS</figcaption></figure>
+    </div>
+    <div class="preface-footnote">A.B. / PRINCETON · PH.D. / PRINCETON · POSTDOC / SYDNEY <span>FIELD NOTES, NOT A FINAL DESTINATION.</span></div>
+  </section>
+
+  <section class="home-diptych" aria-label="Photographic reflections on nature and human nature">
+    <figure class="diptych-left"><img src={photo('gelada',1700)} alt={get('gelada').alt} loading="lazy"/><figcaption>ANOTHER KIND OF LOOKING / ETHIOPIAN HIGHLANDS</figcaption></figure>
+    <figure class="diptych-right"><img src={photo('anemonefish',1500)} alt={get('anemonefish').alt} loading="lazy"/><figcaption>SMALL WORLDS / UNDER THE SURFACE</figcaption></figure>
+    <div class="diptych-note" data-reveal><span>02 / AN OBSERVATION</span><p>There are a thousand ways to look at the same world. I spend my days trying a few of them.</p></div>
+  </section>
+
+  <section class="home-question dark-section">
+    <div class="question-side"><span class="vertical-caption">AN IDEA I KEEP COMING BACK TO</span><span class="chapter-mark">II</span></div>
+    <div class="question-content" data-reveal><p class="overline">THE QUESTION</p><h2>How can we make the <em>right choice</em> the <em>easy choice?</em></h2><div class="question-two-col"><p>As a scientist, I focus on the behavioral alignment challenge—how to make desirable choices the easy options for individuals and communities embedded in social–ecological systems.</p><p>As a photographer and writer, I seek stories that highlight both what we’ve already lost and what more we stand to lose in a changing world.</p></div></div>
+  </section>
+
+  <section class="home-index cream-section" id="explore">
+    <div class="index-intro" data-reveal><p class="overline dark">CONTENTS / FOUR WAYS OF LOOKING</p><h2>Science.<br /><em>Storytelling.</em><br />And the places<br />in between.</h2><p>Not four separate lives. Different ways of asking questions about the same changing world.</p></div>
+    <a class="index-feature science-chapter" href="/science/" data-reveal><img src={photo('turtle',2000)} alt={get('turtle').alt} loading="lazy"/><div class="index-shade"></div><span class="index-n">01 / RESEARCH</span><div class="index-copy"><h3>Science</h3><p>Bright spots, human behavior, and what makes conservation work.</p><span>THE QUESTIONS & THE EVIDENCE ↗</span></div></a>
+    <a class="index-feature photography-chapter" href="/photography/" data-reveal><img src={photo('pink-corals',2000)} alt={get('pink-corals').alt} loading="lazy"/><div class="index-shade"></div><span class="index-n">02 / PHOTOGRAPHY</span><div class="index-copy"><h3>Photography</h3><p>Underwater seascapes. Wild lives. A world worth looking at closely.</p><span>ENTER THE GALLERY ↗</span></div></a>
+    <a class="index-feature writing-chapter" href="/writing/" data-reveal><img src={photo('forest-dusk',2000)} alt={get('forest-dusk').alt} loading="lazy"/><div class="index-shade"></div><span class="index-n">03 / WRITING</span><div class="index-copy"><h3>Writing</h3><p>From a 2,650-mile trail to the science of the changing sea.</p><span>READ THE STORIES ↗</span></div></a>
+    <a class="index-feature book-chapter" href="/book/" data-reveal><img src={photo('reef-wall',2000)} alt={get('reef-wall').alt} loading="lazy"/><div class="index-shade"></div><span class="index-n">04 / THE BOOK</span><div class="index-copy"><h3>A Sea of<br /><em>Fading Color</em></h3><p>Part memoir, part investigative reporting, part love letter to coral reefs.</p><span>ABOUT THE BOOK ↗</span></div></a>
+  </section>
+
+  <section class="home-proof cream-section">
+    <div class="proof-title" data-reveal><span class="overline dark">A FEW PLACES THE WORK HAS LANDED</span><h2>Out in the <em>world.</em></h2></div>
+    <div class="proof-copy" data-reveal><p>My scientific work has appeared in <em>Nature Ecology & Evolution</em>, <em>Nature Sustainability</em>, <em>Conservation Letters</em>, and more. My photography and writing have appeared in <em>National Geographic</em>, <em>Scientific American</em>, <em>BBC Wildlife</em>, <em>Science</em>, and <em>Inside Climate News</em>.</p><div class="proof-links"><a href="/science/#publications">Peer-reviewed work ↗</a><a href="/photography/#recognition">Photography & recognition ↗</a><a href="/writing/">Published writing ↗</a></div></div>
+  </section>
+  <section class="home-coda" style={`--coda-photo: url('${photo('shark-mono',2000)}')`}><div><span class="overline">AN INVITATION</span><h2>There’s always <em>more to see.</em></h2><p>If something here starts a conversation, I’d love to hear from you.</p><a class="round-link" href="/contact/">SAY HELLO <span aria-hidden="true">↗</span></a></div></section>
+</BaseLayout>

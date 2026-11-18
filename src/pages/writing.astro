@@ -1,0 +1,21 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import stories from '../data/writing.json';
+import photos from '../data/photos.json';
+const p=(id,w=1500)=>photos.find(x=>x.id===id).src+`?format=${w}w`;
+const pct=stories.filter(s=>s.url.includes('miles-to-go-pct')).reverse();
+const others=stories.filter(s=>!s.url.includes('miles-to-go-pct'));
+const groups=['Narrative journalism','Science reporting','Commentary','Reviews'];
+const first=s=>s?.excerpt||'';
+---
+<BaseLayout title="Writing | Bing Lin — Environmental journalism and narrative nonfiction" description="Reporting, essays, science journalism and reviews by Bing Lin, published in Inside Climate News, Science, Scientific American and other outlets." theme="light" image={p('forest-dusk',1500)}>
+  <section class="writing-opener"><div class="writing-header-inner"><p class="overline dark">BING LIN / WRITING</p><h1>Out of the<br /><em>field,</em> onto<br />the page.</h1><div class="writing-dek"><span>REPORTING / ESSAYS / REVIEWS</span><p>Stories about places, people, wildlife, and the many ways our lives intersect with the natural world.</p></div></div><figure><img src={p('forest-dusk',1800)} alt="A forested landscape under a sunset, photographed by Bing Lin" fetchpriority="high"/><figcaption>ONE OF MANY DAYS SPENT LOOKING / © BING LIN</figcaption></figure></section>
+
+  <section class="writing-feature"><div class="writing-feature-left"><span class="overline">01 / A FOUR-PART SERIES</span><h2>Miles<br />to <em>Go.</em></h2><p>Inside Climate News · 2024</p><p class="feature-description">In 2019 I hiked the 2,650-mile Pacific Crest Trail from Mexico to Canada. Years later, I returned to report on what the trail reveals about a changing climate—and the places and people in its path.</p><figure><img src={p('mountains',1500)} alt="Conifer forest and mountain ridges photographed by Bing Lin" loading="lazy"/></figure></div><div class="writing-feature-right"><div class="feature-opening"><span>THE SERIES / READ IN ORDER</span><p>“Suffering on your own terms is such a luxury.”</p></div>{pct.map((s,i)=><a href={s.url} target="_blank" rel="noopener noreferrer" class="series-chapter"><small>PART {String(i+1).padStart(2,'0')} / INSIDE CLIMATE NEWS</small><h3>{s.title}</h3><span>READ THE STORY ↗</span></a>)}</div></section>
+
+  <section class="writing-index" id="stories"><div class="writing-index-intro"><p class="overline dark">02 / THE ARCHIVE</p><h2>Other dispatches<br />& <em>observations.</em></h2><p>Selected published work. These links open the original pieces at their respective publications.</p></div>
+    {groups.map((group,index)=><div class="writing-group"><div class="writing-group-label"><span>0{index+1}</span><h3>{group}</h3></div><div class="writing-entries">{others.filter(s=>s.category===group).map(s=><a href={s.url} target="_blank" rel="noopener noreferrer" class="writing-entry"><div><small>{s.publisher} / {s.year}</small><h4>{s.title}</h4><p>{first(s)}</p></div><span class="writing-arrow" aria-hidden="true">↗</span></a>)}</div></div>)}
+  </section>
+  <section class="writing-quote"><img src={p('pinnacle',1900)} alt="A forested peak surrounded by clouds, photographed by Bing Lin" loading="lazy"/><div><span class="overline">A SENTENCE FROM THE FIELD</span><blockquote>“If you can’t find me these days, go to Fort Shirley on the edge of Cabrits National Park, Dominica, and look 20m underwater.”</blockquote><p>FROM “REEF RANGER” / ZING MAGAZINE</p></div></section>
+  <section class="writing-recognition"><div><span class="overline dark">03 / SELECTED RECOGNITION</span><h2>Words that <em>travel.</em></h2></div><div class="writing-recognition-list"><p><strong>Society of Environmental Journalists</strong><br />2026 · Outstanding Student Reporting</p><p><strong>Society of Professional Journalists, Northern California</strong><br />2025 · Longform Storytelling</p><p><strong>Lowell Thomas Travel Journalism Competition</strong><br />2025 · Environmental and Sustainable Tourism</p><a class="text-arrow" href="/docs/Bing_Lin_Creative_CV_2026.pdf" download>MORE IN THE CREATIVE CV ↗</a></div></section>
+</BaseLayout>

@@ -1,0 +1,55 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import photos from '../data/photos.json';
+const underwater=photos.filter(p=>p.category==='underwater');
+const topside=photos.filter(p=>p.category==='topside');
+const gallery=[];
+let u=0,t=0;
+while(u<underwater.length || t<topside.length){if(u<underwater.length)gallery.push(underwater[u++]);if(u<underwater.length)gallery.push(underwater[u++]);if(t<topside.length)gallery.push(topside[t++]);}
+const get=id=>photos.find(p=>p.id===id);
+const img=(id,w=1600)=>get(id).src+`?format=${w}w`;
+const recognition=[
+  ['2026','Ocean Photographer of the Year','Highly Commended, The Ocean Unseen: Hidden Worlds'],
+  ['2024','Monochrome Awards','2nd Place, Wildlife'],
+  ['2023','The Nature Conservancy Global Photo Contest','Honorable Mention, Mammals'],
+  ['2023 / 2021','Wildlife Photographer of the Year','Finalist'],
+  ['2022','Nature ScientistsAtWork','Overall Winner'],
+  ['2023','BirDiversity Art Exhibition','Best Overall Bird Art'],
+  ['2026','Australian National Maritime Museum','Ocean Photographer of the Year exhibition']
+];
+---
+<BaseLayout title="Photography | Bing Lin — Wildlife, ocean & environmental stories" description="Selected underwater and topside photography by Bing Lin, conservation scientist and award-winning photojournalist. Visual stories, features and exhibitions." theme="dark" image={img('pink-corals',1500)}>
+  <section class="photo-opener"><figure><img src={img('pink-corals',2200)} alt={get('pink-corals').alt} fetchpriority="high"/><figcaption>© BING LIN / SELECTED WORK</figcaption></figure><div class="photo-opener-title"><p class="overline">AN INCOMPLETE ATLAS OF THE LIVING WORLD</p><h1>Look<br /><em>closer.</em></h1><p>Underwater seascapes, wilderness landscapes, and the moments in between.</p><a href="#photographs">SEE THE PHOTOGRAPHS ↓</a></div></section>
+  <section class="photo-intro"><span class="chapter-mark">I</span><p>I seek stories that highlight both what we’ve already lost and what more we stand to lose at the frontlines of global environmental change.</p><span class="photo-intro-note">SCIENCE AND STORYTELLING / THROUGH THE SAME LENS</span></section>
+  <section class="photo-gallery-section" id="photographs"><div class="gallery-heading"><div><p class="overline">SELECTED IMAGES / BING LIN</p><h2>The <em>photographs.</em></h2></div><div class="photo-controls" role="group" aria-label="Filter photographs"><button data-filter="all" class="selected" aria-pressed="true">All photographs <span>({gallery.length})</span></button><button data-filter="underwater" aria-pressed="false">Underwater</button><button data-filter="topside" aria-pressed="false">On land</button></div></div>
+    <div class="photo-mosaic" id="photo-grid">
+      {gallery.map((p,i)=><button class:list={['photo-tile',i%9===0&&'tile-wide',i%9===3&&'tile-tall',i%9===6&&'tile-tall']} type="button" data-category={p.category} data-index={i} aria-label={`Enlarge photograph: ${p.alt}`}><img src={`${p.src}?format=1000w`} alt={p.alt} loading="lazy"/><span class="photo-tile-overlay"><span>{String(i+1).padStart(2,'0')} / {p.category === 'underwater' ? 'BELOW THE SURFACE' : 'ON LAND'}</span><span>VIEW <span aria-hidden="true">↗</span></span></span></button>)}
+    </div>
+    <p class="photo-gallery-footnote">SELECTED FROM THE ORIGINAL UNDERWATER AND TOPSIDE GALLERIES. CLICK ANY PHOTOGRAPH TO EXPLORE.</p>
+  </section>
+  <div class="lightbox" id="lightbox" role="dialog" aria-label="Photograph viewer" aria-modal="true" hidden><button class="lightbox-close" type="button" aria-label="Close photograph viewer">CLOSE ×</button><button class="lightbox-prev" type="button" aria-label="Previous photograph">←</button><figure><img id="lightbox-image" alt=""/><figcaption><span id="lightbox-caption"></span><span id="lightbox-counter"></span></figcaption></figure><button class="lightbox-next" type="button" aria-label="Next photograph">→</button></div>
+
+  <section class="photo-stories cream-section"><div class="photo-stories-head"><span class="overline dark">II / WHEN A PHOTOGRAPH BECOMES A STORY</span><h2>The work <em>in context.</em></h2><p>Assignments, environmental reporting, and images published beyond this website.</p></div><div class="photo-story-grid"><a href="https://insideclimatenews.org/news/12082024/miles-to-go-pct-part-1/" target="_blank" rel="noopener noreferrer" class="photo-story"><img src={img('forest-fire',1600)} alt={get('forest-fire').alt} loading="lazy"/><div><span>ENVIRONMENTAL REPORTING / INSIDE CLIMATE NEWS</span><h3>Miles to Go</h3><p>A four-part journey along the Pacific Crest Trail, through a changing American West.</p><b>READ THE SERIES ↗</b></div></a><a href="https://www.scientificamerican.com/blog/observations/life-among-the-monkeys/" target="_blank" rel="noopener noreferrer" class="photo-story"><img src={img('gelada',1600)} alt={get('gelada').alt} loading="lazy"/><div><span>WILDLIFE / THE ETHIOPIAN HIGHLANDS</span><h3>Life among the Monkeys</h3><p>Wild lives and long days of fieldwork at 11,000 feet.</p><b>READ THE STORY ↗</b></div></a></div></section>
+  <section class="photography-acknowledgements"><div><p class="overline">III / A FEW HONORS & EXHIBITIONS</p><h2>Seen, shared,<br /><em>recognized.</em></h2><p>The photographs come first. Here are a few places they’ve traveled.</p></div><div class="award-index" id="recognition">{recognition.map(a=><div class="award-line"><span>{a[0]}</span><strong>{a[1]}</strong><small>{a[2]}</small></div>)}<p class="award-note">Also featured in <em>National Geographic</em>, <em>BBC Wildlife</em>, <em>The Guardian</em>, <em>Science News</em>, and other outlets.</p><a class="underlined-link" href="/docs/Bing_Lin_Creative_CV_2026.pdf" download>DOWNLOAD CREATIVE CV ↗</a></div></section>
+  <section class="photo-finale"><img src={img('shark-mono',2000)} alt={get('shark-mono').alt} loading="lazy"/><div><p class="overline">PRINTS / FEATURES / COMMISSIONS</p><h2>Have a story<br />in <em>mind?</em></h2><a href="/contact/">LET'S TALK ↗</a></div></section>
+  <script define:vars={{gallery}}>
+    const images=gallery;
+    const buttons=[...document.querySelectorAll('[data-filter]')];
+    const tiles=[...document.querySelectorAll('.photo-tile')];
+    const modal=document.querySelector('#lightbox');
+    const modalImage=document.querySelector('#lightbox-image');
+    const caption=document.querySelector('#lightbox-caption');
+    const counter=document.querySelector('#lightbox-counter');
+    let active=0;let filtered=images.map((_,i)=>i);let previousFocus=null;
+    const sized=(url,width)=>url+(url.includes('?')?'&':'?')+'format='+width+'w';
+    const render=(n)=>{if(!filtered.length)return;active=(n+filtered.length)%filtered.length;const p=images[filtered[active]];modalImage.src=sized(p.src,2500);modalImage.alt=p.alt;caption.textContent=p.alt+' · '+p.credit;counter.textContent=String(active+1).padStart(2,'0')+' / '+String(filtered.length).padStart(2,'0')};
+    buttons.forEach(b=>b.addEventListener('click',()=>{const filter=b.dataset.filter;buttons.forEach(x=>{x.classList.toggle('selected',x===b);x.setAttribute('aria-pressed',String(x===b))});tiles.forEach(t=>t.hidden=filter!=='all'&&t.dataset.category!==filter);filtered=images.map((p,i)=>filter==='all'||p.category===filter?i:-1).filter(i=>i>=0)}));
+    tiles.forEach(t=>t.addEventListener('click',()=>{previousFocus=document.activeElement;const i=filtered.indexOf(Number(t.dataset.index));render(Math.max(i,0));modal.hidden=false;document.body.classList.add('lightbox-open');modal.querySelector('.lightbox-close')?.focus()}));
+    function close(){modal.hidden=true;modalImage.removeAttribute('src');document.body.classList.remove('lightbox-open');previousFocus?.focus()}
+    modal.querySelector('.lightbox-close')?.addEventListener('click',close);
+    modal.querySelector('.lightbox-prev')?.addEventListener('click',()=>render(active-1));
+    modal.querySelector('.lightbox-next')?.addEventListener('click',()=>render(active+1));
+    modal.addEventListener('click',e=>{if(e.target===modal)close()});
+    document.addEventListener('keydown',e=>{if(modal.hidden)return;if(e.key==='Escape')close();if(e.key==='ArrowRight')render(active+1);if(e.key==='ArrowLeft')render(active-1);if(e.key==='Tab'){const focusables=[...modal.querySelectorAll('button')];const first=focusables[0],last=focusables[focusables.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}}});
+  </script>
+</BaseLayout>

@@ -1,0 +1,108 @@
+[
+  {
+    "title": "Unifying bright spots research for people and nature",
+    "authors": "Lin, B. & Cinner, J. E.",
+    "year": 2026,
+    "journal": "Nature Ecology & Evolution",
+    "doi": "https://doi.org/10.1038/s41559-026-03180-5",
+    "image": "reef-wall",
+    "featured": true,
+    "area": "Bright spots",
+    "summary": "A synthesis of more than 70 studies introduces six approaches to identifying bright spots, and a framework for learning from unexpected success."
+  },
+  {
+    "title": "Causes and correlates of unsustainable scuba diving tourism on coral reefs",
+    "authors": "Lin, B., Bearpark, T., Roche, R. C., McGuire, J., Jakub, R., Prabuning, D., Weber, E. U. & Wilcove, D. S.",
+    "year": 2026,
+    "journal": "Conservation Letters",
+    "doi": "https://doi.org/10.1111/con4.70055",
+    "image": "diver-blue",
+    "featured": true,
+    "area": "Behavior",
+    "summary": "Direct observation of recreational divers helps explain environmentally damaging behavior on coral reefs."
+  },
+  {
+    "title": "Toward improved conservation risk assessments in the marine aquarium fish trade",
+    "authors": "Lin, B., Zeng, Y., To, B., Holmberg, R. J., Rhyne, A. L., Tlusty, M. & Wilcove, D. S.",
+    "year": 2026,
+    "journal": "Conservation Biology",
+    "doi": "https://doi.org/10.1111/cobi.70381",
+    "image": "anemonefish",
+    "area": "Wildlife trade"
+  },
+  {
+    "title": "Extent of threats to marine fish from the online aquarium trade in the United States",
+    "authors": "Lin, B., Zeng, Y., To, B., Holmberg, R. J., Rhyne, A. L., Tlusty, M. & Wilcove, D. S.",
+    "year": 2026,
+    "journal": "Conservation Biology",
+    "doi": "https://doi.org/10.1111/cobi.70155",
+    "image": "anemonefish",
+    "area": "Wildlife trade",
+    "publicationNote": "First published online in October 2025; 2026 journal volume."
+  },
+  {
+    "title": "Determinants of microbiome composition: Insights from free-ranging hybrid zebras",
+    "authors": "Abraham, J. O., Lin, B., et al.",
+    "year": 2024,
+    "journal": "Molecular Ecology",
+    "doi": "https://doi.org/10.1111/mec.17370",
+    "image": "gelada",
+    "area": "Ecology"
+  },
+  {
+    "title": "Post-Conflict Behaviors of Wild Gelada Monkeys at Guassa, Ethiopia",
+    "authors": "Lin, B., Hohn, T. I., et al.",
+    "year": 2024,
+    "journal": "International Journal of Primatology",
+    "doi": "https://doi.org/10.1007/s10764-024-00438-2",
+    "image": "gelada",
+    "area": "Behavior"
+  },
+  {
+    "title": "Coral reefs and coastal tourism in Hawaii",
+    "authors": "Lin, B., Zeng, Y., Asner, G. P. & Wilcove, D. S.",
+    "year": 2023,
+    "journal": "Nature Sustainability",
+    "doi": "https://doi.org/10.1038/s41893-022-01021-4",
+    "image": "turtle",
+    "featured": true,
+    "area": "Conservation policy",
+    "summary": "Exploring the relationships between coral reefs and the coastal tourism they support."
+  },
+  {
+    "title": "Epizoochorous seed dispersal by an Afromontane savanna primate",
+    "authors": "Venkataraman, V. V., et al. (including Lin, B.)",
+    "year": 2022,
+    "journal": "Biotropica",
+    "doi": "https://doi.org/10.1111/btp.13057",
+    "image": "gelada",
+    "area": "Ecology"
+  },
+  {
+    "title": "Close encounters of the worst kind: Reforms needed to curb coral reef damage by recreational divers",
+    "authors": "Lin, B.",
+    "year": 2021,
+    "journal": "Coral Reefs",
+    "doi": "https://doi.org/10.1007/s00338-021-02153-3",
+    "image": "diver-blue",
+    "area": "Conservation policy"
+  },
+  {
+    "title": "A better classification of wet markets is key to safeguarding human health and biodiversity",
+    "authors": "Lin, B., Dietrich, M. L., Senior, R. A. & Wilcove, D. S.",
+    "year": 2021,
+    "journal": "The Lancet Planetary Health",
+    "doi": "https://doi.org/10.1016/S2542-5196(21)00112-1",
+    "image": "shorebird",
+    "area": "Conservation policy"
+  },
+  {
+    "title": "Leopard predation on gelada monkeys at Guassa, Ethiopia",
+    "authors": "Lin, B., Foxfoot, I. R., et al.",
+    "year": 2020,
+    "journal": "American Journal of Primatology",
+    "doi": "https://doi.org/10.1002/ajp.23098",
+    "image": "gelada",
+    "area": "Ecology"
+  }
+]
