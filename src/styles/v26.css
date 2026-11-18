@@ -1,0 +1,81 @@
+/* V26 — focused correction for Research / Photography wave seams and hero height.
+   Earlier versions masked the *entire* hero and tried to position the next
+   section behind its transparent holes.  The page background could still
+   show through on certain viewport sizes/stacking contexts.  Instead, paint
+   the following section's EXACT colour into a short, curved overlay at the
+   bottom of the photograph.  This contains no transparent hole through which
+   the outer page background can leak. */
+
+.v18-research .v11-research-hero.v22-waved-hero,
+.v12-photo-hero.v22-waved-hero {
+  --v26-wave-height:clamp(30px,3.6vw,52px);
+  position:relative!important;
+  overflow:hidden!important;
+  margin-bottom:0!important;
+  -webkit-mask-image:none!important;
+  mask-image:none!important;
+  -webkit-mask:none!important;
+  mask:none!important;
+}
+.v18-research .v11-research-hero.v22-waved-hero {--v26-next:#103a40;}
+.v12-photo-hero.v22-waved-hero {--v26-next:#e7ece5;}
+
+/* A positive, paint-backed wave.  The bottom of this pseudo-element is fully
+   opaque and the section immediately following uses the identical colour. */
+.v18-research .v11-research-hero.v22-waved-hero::before,
+.v12-photo-hero.v22-waved-hero::before {
+  content:"";
+  position:absolute;
+  left:0;right:0;bottom:-1px;
+  width:100%;height:var(--v26-wave-height);
+  z-index:9!important;
+  pointer-events:none;
+  background:var(--v26-next);
+  -webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 90' preserveAspectRatio='none'%3E%3Cpath fill='white' d='M0 33 C120 8 245 8 366 31 S606 58 746 31 S995 5 1123 31 S1324 55 1440 27 V90 H0 Z'/%3E%3C/svg%3E");
+  mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 90' preserveAspectRatio='none'%3E%3Cpath fill='white' d='M0 33 C120 8 245 8 366 31 S606 58 746 31 S995 5 1123 31 S1324 55 1440 27 V90 H0 Z'/%3E%3C/svg%3E");
+  -webkit-mask-repeat:no-repeat;
+  mask-repeat:no-repeat;
+  -webkit-mask-size:100% 100%;
+  mask-size:100% 100%;
+}
+/* Remove the old negative-margin underlap on these two pages ONLY. */
+.v18-research .v11-research-hero.v22-waved-hero + .v21-photo-cut + .v11-research-intro,
+.v12-photo-hero.v22-waved-hero + .v21-photo-cut + .v12-photo-intro {
+  margin-top:0!important;
+  z-index:1!important;
+  position:relative!important;
+}
+.v18-research .v11-research-hero.v22-waved-hero + .v21-photo-cut + .v11-research-intro {
+  background:#103a40!important;
+  padding-top:clamp(64px,5.8vw,94px)!important;
+}
+.v12-photo-hero.v22-waved-hero + .v21-photo-cut + .v12-photo-intro {
+  background:#e7ece5!important;
+  padding-top:clamp(65px,6vw,95px)!important;
+}
+
+/* A modest 5% vertical trim (relative to the natural 1600:1067 photographs)
+   without the fixed-height/zoomed crops used by earlier versions. */
+.v18-research .v11-research-hero.v22-waved-hero > img,
+.v12-photo-hero.v22-waved-hero > img,
+.v20-writing-hero.v22-waved-hero > img {
+  width:100%!important;
+  height:auto!important;
+  aspect-ratio:1.58 / 1!important;
+  object-fit:cover!important;
+  object-position:50% 50%!important;
+  max-height:none!important;
+}
+/* Keep the split-level horizon and the aerial channel where intended. */
+.v18-research .v11-research-hero.v22-waved-hero > img {object-position:50% 47%!important;}
+.v12-photo-hero.v22-waved-hero > img {object-position:50% 50%!important;}
+.v20-writing-hero.v22-waved-hero > img {object-position:50% 50%!important;}
+
+/* On phones, preserve a little more vertical photo for the overlaid headings. */
+@media(max-width:700px){
+ .v18-research .v11-research-hero.v22-waved-hero > img,
+ .v12-photo-hero.v22-waved-hero > img,
+ .v20-writing-hero.v22-waved-hero > img{aspect-ratio:1.54 / 1!important;}
+ .v18-research .v11-research-hero.v22-waved-hero,
+ .v12-photo-hero.v22-waved-hero{--v26-wave-height:31px;}
+}
